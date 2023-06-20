@@ -56,17 +56,17 @@ class BankAccount {
 
   currentDate(customDate) {
     if (customDate) {
-    return new Date(customDate).toLocaleDateString('en-UK', {
+      return new Date(customDate).toLocaleDateString('en-UK', {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+      });
+    } 
+    return new Date().toLocaleDateString('en-UK', {
       year: 'numeric',
       month: 'numeric',
       day: 'numeric',
     });
-  } 
-  return new Date().toLocaleDateString('en-UK', {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-  });
   }
   
 }
